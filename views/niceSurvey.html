@@ -1,0 +1,119 @@
+<html>
+  <head>
+    <title>Questionnaire</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+    <link rel="stylesheet" href="/assets/style.css" type="text/css" />
+  </head>
+
+  <body>
+    <div class="container-md p-3 my-3 border bg-dark text-white" id="survey">
+      <div class="link">
+        <h1>Survey</h1>
+        <!-- Link to the website of my choice -->
+        <h2>
+          Please have a look of the UI on
+          <a href="https://ca.puma.com/en/ca/home" target="_blank"
+            ><span>Puma</span>
+          </a>
+          's website,<br />
+          and fill out the following questionnaire.
+        </h2>
+      </div>
+
+      <div class="image">
+        <!-- Image of the webiste that serves as a link to the website -->
+        <a href="https://ca.puma.com/en/ca/home" target="_blank"
+          ><img src="/assets/Puma-FrontPage.jpg" alt="Puma Front Page"
+        /></a>
+      </div>
+      <!-- Form that contains the 6 questions -->
+      <form>
+        <!-- Text types question -->
+        <div class="form" id="typedQuestion">
+          <p>Please put your personal information</p>
+          <p>First name: <input type="text" name="firstName" /></p>
+          <p>Last name: <input type="text" name="lastName" /></p>
+        </div>
+        <!-- Single choice question (radio button) -->
+        <div class="form" id="singleChoiceQuestionRadio">
+          <p>Would you visit the puma website again?</p>
+          <input type="radio" name="visit" value="Yes" />Yes<br />
+          <input type="radio" name="visit" value="No" />No<br />
+        </div>
+        <!-- Single choice question (selection list) -->
+        <div class="form" id="singleChoiceQuestionList">
+          <p>What type of Puma shoes are you most interested in?</p>
+          <select name="typeShoes" id="typeOfShoes">
+            <option value="Lifestyle" selected="selected">Lifestyle</option>
+            <option value="Classics">Classics</option>
+            <option value="Running">Running</option>
+          </select>
+        </div>
+        <!-- Multi-selection type question -->
+        <div id="multiSelectionQuestion">
+          <p>
+            What charactersitcs of a User-Friendly website did Puma's website
+            achieved?
+          </p>
+          <input
+            type="checkbox"
+            name="characts"
+            value="Mobile Compatibility"
+          />Mobile Compatibility<br />
+          <input
+            type="checkbox"
+            name="characts"
+            value="Accessible to All Users"
+          />Accessible to All Users<br />
+          <input type="checkbox" name="characts" value="Fast Load Times" />Fast
+          Load Times<br />
+          <input
+            type="checkbox"
+            name="characts"
+            value="Browser Consistency"
+          />Browser Consistency<br />
+          <input type="checkbox" name="characts" value="Usable Forms" />Usable
+          Forms<br />
+        </div>
+        <!-- Place to write comments -->
+        <div class="form" id="commentQuestion">
+          <p>What do you think needs to be improved on Puma's website?</p>
+          <textarea name="comments" rows="4" cols="40"></textarea>
+        </div>
+        <!-- Likert type question -->
+        <div class="form" id="likertTypeQuestion">
+          <p>From 1 to 5 how good of a UI is the puma's website?</p>
+          1 <input type="radio" name="goodUi" value="1" />
+          <input type="radio" name="goodUi" value="2" />
+          <input type="radio" name="goodUi" value="3" />
+          <input type="radio" name="goodUi" value="4" />
+          <input type="radio" name="goodUi" value="5" /> 5
+        </div>
+        <!-- Submit button -->
+        <div class="submitButton">
+          <button type="submit" class="btn btn-warning" id="bb">Submit</button>
+          <p id="thanks"></p>
+        </div>
+      </form>
+      <!-- Signature -->
+      <div class="signature">
+        <p>
+          Website designed by
+          <a href="mailto:ralymuhif@yahoo.fr">Ralph Muhimpundu</a>
+        </p>
+      </div>
+    </div>
+    <script src="/assets/action.js"></script>
+  </body>
+</html>
